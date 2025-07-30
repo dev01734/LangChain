@@ -1,11 +1,15 @@
-from langchain_openai import OpenAI
+# from langchain_openai import OpenAI
+from langchain_google_genai import GoogleGenerativeAI
 from dotenv import load_dotenv
 
 load_dotenv()
 
-llm = OpenAI(model="gpt-3.5")
+llm = GoogleGenerativeAI(model="gemini-2.0-flash")
 
-ans = llm.invoke("What is India?")
+ans = llm.invoke("What is capital India?")
 
 print(ans)
 
+# =================================
+
+# from langchain_google_genai import GoogleGenerativeAI
